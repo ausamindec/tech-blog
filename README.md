@@ -1,7 +1,7 @@
 # Tech Blog
 
 ## Demo
-[Live Demo](https://techblogvs.herokuapp.com/)
+[Live Demo: Tech Blog](https://timpass-blog.herokuapp.com/)
 
 
 
