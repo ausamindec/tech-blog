@@ -1,0 +1,27 @@
+    
+    <div class="container border-1px"  style="margin-top: 25px;padding-bottom:25px;background-color:white">
+    <div class="row background-white" >
+        <div class="col background-white" >
+            <h2  class="background-white">Dashboard: Your posts</h2>
+        </div>
+        <div class="col text-right background-white">
+            <a href="/dashboard/create/"><button id="create-post" class="button background-white mr-auto">Create Post</button></a>
+        </div>
+        
+    </div>
+<hr>
+{{#if posts.length}}
+    {{#each posts as |post|}}
+        <div class="container background-white">
+        {{> post-info post}}
+        
+            <a href="/dashboard/edit/{{post.id}}"><button class="button btn-primary" style="border-radius: 10px;">Edit Post</button></a>
+        </div>
+    {{/each}}
+</div>
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic  background-white">Currently, You don't have any posts. Please click on create post button to create a new post.</h6>
+
+{{/if}}
+
+</div>

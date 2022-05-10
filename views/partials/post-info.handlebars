@@ -1,0 +1,15 @@
+
+
+<div class="card">
+  <div class="card-header">
+   <a href="/post/{{id}}"  class="post is-capitalized ">{{postTitle}} </a>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{postContent}}</p>
+  </div>
+  <div class="card-footer text-right">
+                <a class="card-footer-text" style="text-decoration: none;color:gray;"><a style="font-weight: bold;">{{user.user_name}} </a>
+                 | {{format_date created_at}} | <a href="/post/{{id}}" style="text-decoration: none;">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                 </a>
+  </div>
+</div>

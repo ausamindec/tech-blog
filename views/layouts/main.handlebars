@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> --}}
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+  {{!-- <div class="wrapper">
+    <header>
+        
+        <nav class="navbar mt-2">
+          
+        </nav>
+    </header> --}}
+<body style="background-color: white;   color:gray ;">
+  
+<nav class="navbar navbar-expand-lg  nav-background-app">
+  <a class="navbar-brand nav-background-app" href="/"><b class="nav-background-app">A Tech Blog</b></a>
+  <button class="navbar-toggler  custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse nav-background-app" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto nav-background-app">
+      
+            <li class="nav-item nav-background-app">
+                        <a href="/" class="nav-link  ">Home</a>
+            </li>
+            {{#if loggedIn}}
+            <li class="nav-item nav-background-app">
+              <a href="/dashboard" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-item nav-background-app">
+              <a href="/dashboard/create/" class="nav-link">Create Post</a>
+            </li>
+            
+            <li class="nav-item nav-background-app ">
+              <a id="logout" class="button nav-link">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item nav-background-app">
+               <a href="/login" class="button nav-link">Login</a>
+          
+          
+            </li>    
+            {{/if}}
+              
+    </ul>
+    
+  </div>
+  
+</nav>
+
+<div class="container"  style="padding-top: 50px;">
+            {{{ body }}}
+
+</div>
+  
+    <footer class="footer rows" style="bottom: 0 !important;padding-bottom:25px;padding-top:25px">
+        <div class="text-center">
+            <p style="text-decoration: none;">
+            <a class="border-1px-solid" style="text-decoration: none;" href="/">Home</a>
+            <a  style="text-decoration: none;margin-right:10px"></a> 
+            {{#if loggedIn}} 
+            <a class="border-1px-solid" style="text-decoration: none;" href="/dashboard/">Dashboard</a>  
+            <a  style="text-decoration: none;margin-right:10px"></a> 
+            <a class="border-1px-solid" style="text-decoration: none;" href="/dashboard/create/">Create new post</a>
+            {{else}}
+             <a class="border-1px-solid" style="text-decoration: none;" href="/login/">Login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="">
+    <p>
+    </p>
+  </div>
+    </footer>
+  </div>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+
+</html>
